@@ -60,9 +60,19 @@ ping dashboard.example.com
 > ...
 > 
 
-## B. Preparation
+## B. Get Started
 
-### 1. Create docker networks
+### 1. Clone the repository
+Clone to default folder with the same name as repository 
+```bash
+git clone https://github.com/big-data-consultant/micro-stack-traefik-v2
+```
+or specify a local folder with different name
+```bash
+git clone https://github.com/big-data-consultant/micro-stack-traefik-v2 <local-folder-name>
+```
+
+### 2. Create docker networks
 ```bash
 docker network prune
 ```
@@ -70,12 +80,12 @@ docker network prune
 docker network create micro-v2-net-front
 docker network create micro-v2-net-back
 ```
-### 2. Creater docker volumes
+### 3. Creater docker volumes
 ```bash
 docker volume create micro-v2-wp-vol
 docker volume create micro-v2-db-vol
 ```
-### 3. Spin up the containers
+### 4. Start the container stack
 ```bash
 docker compose up -d
 ```
