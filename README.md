@@ -67,7 +67,7 @@ Clone to default folder with the same name as repository
 ```bash
 git clone https://github.com/big-data-consultant/micro-stack-traefik-v2
 ```
-or specify a local folder with different name
+or specify a local folder name to pull the repository in
 ```bash
 git clone https://github.com/big-data-consultant/micro-stack-traefik-v2 <local-folder-name>
 ```
