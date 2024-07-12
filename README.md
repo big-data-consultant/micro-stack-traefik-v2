@@ -10,7 +10,7 @@ This demo needs the Docker-Desktop and Docker-Compose to run it. Install them if
 
 ### 2. Domain names are locally resolvable
 
-#### a. Append two names to OS hosts
+#### a. Append the names to OS hosts
 
 ```code
 ...
