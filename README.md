@@ -1,6 +1,6 @@
 # micro-stack-traefik-v2
 
-This microservice stak demostrates how to use the Traefik-v2 to secure the self-hosted web apps by enabling the https protocol with them (a whoami app & a wordpress site as the examples here). The stack is configured to use the development certificate applied by account "theafkdeveloper@gmail.com" for doamin "example.com". In practical use, you need to apply a certificate for your domain and update the "certificatesresolvers" section of the traefik config yaml file accordingly (line 31-33 in example here).
+This microservice stak demostrates how to use the Traefik-v2 to secure the self-hosted web apps by enabling the https protocol with them (a whoami app & a wordpress site as the examples here). The stack is configured to use the development certificate applied by account 'theafkdeveloper@gmail.com' for doamin "example.com". In practical use, you need to apply a certificate for your domain and update the "certificatesresolvers" section of the traefik config yaml file accordingly (line 31-33 in example here).
 
 ## A. Prerequirments
 
@@ -23,11 +23,12 @@ This demo needs the Docker-Desktop and Docker-Compose to run it. Install them if
 #### b. Create nmae records in a local DNS
 
 Config a local DNS server like Pi-hole & add A recored or CNAMEs to resolve
-
+```
 <!-- example.com -->
 www.example.com
 whoami.example.com
 dashbaord.example.com
+```
 
 #### c. Check the domain name resolvers
 
@@ -37,26 +38,27 @@ ping whoami.example.com
 ping dashboard.example.com
 ```
 
-Pinging www.example.com [127.0.0.1] with 32 bytes of data:
-Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
-Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
-Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
-Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
-...
-
-Pinging whoami.example.com [127.0.0.1] with 32 bytes of data:
-Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
-Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
-Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
-Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
-...
-
-Pinging dashboard.example.com [127.0.0.1] with 32 bytes of data:
-Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
-Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
-Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
-Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
-...
+> Pinging www.example.com [127.0.0.1] with 32 bytes of data:
+> Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
+> Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
+> Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
+> Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
+> ...
+> 
+> Pinging whoami.example.com [127.0.0.1] with 32 bytes of data:
+>  Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
+>  Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
+> Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
+> Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
+> ...
+> 
+> Pinging dashboard.example.com [127.0.0.1] with 32 bytes of data:
+> Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
+> Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
+> Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
+> Reply from 127.0.0.1: bytes=32 time<1ms TTL=128
+> ...
+> 
 
 ## B. Preparation
 
